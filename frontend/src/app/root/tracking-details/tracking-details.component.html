@@ -1,0 +1,36 @@
+<div class="container">      
+
+
+<table class="style">
+		<tr>
+			<th>PRODUCT</th>
+			<th>DESCRIPTION</th>
+            <th>COST</th>
+            <th>Pickup Schedule Date</th>
+			<th *ngIf="globalService.isAdmin; else elseSpan">EDIT SHIPMENT</th>
+			<ng-template #elseSpan><th>VIEW SHIPMENT</th></ng-template>
+			<th>CANCEL SHIPMENT</th>
+		</tr>
+		<tr *ngFor="let item of products; let i = index">
+			<td>{{item.title}}</td>
+			<td>{{item.description}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.schedule}}</td>
+			<td> <button (click) = "viewProductDetails(item._id)">{{displayMode}}</button></td>
+			<td> <button (click) = "deleteProduct(item._id)">CANCEL</button></td>
+		</tr>
+</table>
+
+<div class="card edit-card" >
+            <label for="email">Tracking Id</label>
+              <input
+                type="trackingId"
+                class="form-control"
+                id="trackingId"
+                name="trackingId"
+                placeholder="ex. 1212121323"
+                 [(ngModel)]="trackingId"
+              />
+            <button  col-sm-2 class="submit-btn btn btn-success" type="submit" (click) = "submitTrackingId()"  >Submit</button>
+</div>
+</div>

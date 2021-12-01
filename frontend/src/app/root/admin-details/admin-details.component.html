@@ -1,0 +1,21 @@
+<div class="container">      
+
+
+<table class="style">
+		<tr>
+			<th>PRODUCT</th>
+			<th>DESCRIPTION</th>
+            <th>COST</th>
+			<th>STATUS</th>
+			<th>EDIT CLAIM</th>
+		</tr>
+		<tr *ngFor="let item of claims; let i = index">
+			<td>{{item.productName}}</td>
+			<td>{{item.comment}}</td>
+            <td>{{item.cost}}</td>
+            <td>{{item.status}}</td>
+			<td> <button (click) = "viewProductDetails(item._id)">{{displayMode}}</button></td>
+		</tr>
+</table>
+
+</div>

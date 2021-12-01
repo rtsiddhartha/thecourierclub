@@ -1,0 +1,177 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="width: 100%">
+    <img class="logo" src="../assets/images/LOGO.jpeg" alt="image"/>
+    <a class="navbar-brand heading" routerLink="">The Courier Club</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">HOME</a>
+        </li>
+        <li *ngIf="!globalService.isAdmin" class="nav-item">
+          <a class="nav-link" routerLink="create" routerLinkActive="active"
+            >SHIP PRODUCT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="tracking-detials" routerLinkActive="active"
+            >TRACKING DETAILS</a
+          >
+        </li>
+        <li class="nav-item">
+          <a *ngIf="globalService.isAdmin" class="nav-link" routerLink="admin-details" routerLinkActive="active"
+            >ADMIN</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active"
+            >ABOUT US</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="services" routerLinkActive="active"
+            >SERVICES</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="claims" routerLinkActive="active"
+            >CLAIMS</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact" routerLinkActive="active"
+            >CONTACT</a
+          >
+        </li>
+        <div
+          *ngIf="globalService.showLogin; else showUser"
+          id="userlogin"
+          class="text-end ml-4"
+        >
+          <li class="nav-item">
+            <button
+              type="button"
+              class="btn btn-outline-dark mr-2"
+              routerLink="user-login"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning mr-2"
+              routerLink="user-register"
+            >
+              Register
+            </button>
+          </li>
+        </div>
+        <ng-template #showUser>
+          <div class="text-end ml-4">
+            <li class="nav-item">
+              <div class="dropdown d-inline-block">
+                <a
+                  href="#"
+                  class="icontext mr-4 dropdown-toggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="icon icon-xs rounded-circle bg-primary">
+                    <i class="fa fa-user white"></i>
+                  </span>
+                  <p class="profileText">Hi, {{ globalService.user.name }}</p>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right"
+                  x-placement="bottom-end"
+                  style="
+                    position: absolute;
+                    will-change: transform;
+                    top: 0px;
+                    left: 0px;
+                    transform: translate3d(0px, 32px, 0px);
+                  "
+                >
+                  <a href="/user-profile" class="dropdown-item">My profile</a>
+                  <a class="dropdown-item" (click)="globalService.resetUser()"
+                    >Log out</a
+                  >
+                </div>
+                <!--<a href="" class="widget-header mr-2">
+                  <div class="icon d-inline">
+                    <i
+                      class="icon-sm rounded-circle border fa fa-shopping-cart"
+                    ></i>
+                  </div>
+                </a> -->
+              </div>
+            </li>
+          </div>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<footer id="ft">
+  <div class="footergrid">
+      <div class="footerrow">
+          <ol>
+              <li><a href="#ft"><span class="yel">TERMS</span></a></li>
+              <li><a href="#ft">Terms of Use</a></li>
+              <li><a href="#ft">Terms &amp; Conditions</a></li>
+              <li><a href="#ft">Privacy Policy</a></li>
+              <li><a href="#ft">Cookie Policy</a></li>
+          </ol>
+      </div>
+      <div class="footerrow">
+          <ol>
+              <li><a href="#ft"><span class="yel">HELP &amp; INFORMATION</span></a></li>
+              <li><a href="#ft">How to book a courier</a></li>
+              <li><a href="#ft">How to use a coupon code</a></li>
+              <li><a href="#ft">About us</a></li>
+              <li><a href="#ft">FAQs</a></li>
+              <li><a href="#ft">Contact us</a></li>
+          </ol>
+      </div>
+      <div class="footerrow">
+          <ol>
+              <li><a href="#ft"><span class="yel">OPEN HOURS</span></a></li>
+              <li><span class="day">Monday</span></li>
+              <li><span class="day">Tuesday</span></li>
+              <li><span class="day">Wednesday</span></li>
+              <li><span class="day">Thursday</span></li>
+              <li><span class="day">Friday</span></li>
+              <li><span class="day">Saturday</span></li>
+              <li><span class="day">Sunday</span></li>
+          </ol>
+          <ol>
+              <li></li>
+              <li>9:00 - 21:00</li>
+              <li>9:00 - 21:00</li>
+              <li>9:00 - 21:00</li>
+              <li>9:00 - 21:00</li>
+              <li>9:00 - 21:00</li>
+              <li>9:00 - 21:00</li>
+              <li>Closed</li>
+          </ol>
+      </div>
+  </div>
+  <hr />
+  <div class="cards">
+      <p id="cardtxt">WE ACCEPT</p><img class="cardtype" src="./assets/images/visa-45x29.png" alt="Visa" /><img class="cardtype" src="./assets/images/maestro-45x36_1_.png" alt="Maestro" /><img class="cardtype" src="./assets/images/mastercard-45x32_1_.png" alt="Mastercard" />
+  </div>
+  <p class="copyright">&copy; 2021 The Courier Club | For any Enquiries Contact : <a href="mailto:thecourierclub@gmail.com">thecourierclub@gmail.com</a></p>
+</footer>

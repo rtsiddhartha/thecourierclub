@@ -1,0 +1,148 @@
+.icontext {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.logo {
+  width: 100px;
+  height: 70px;
+}
+
+.icontext .icon {
+  position: relative;
+  margin-right: 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+footer   { 
+  /* background-color: #000000; */
+  color: whitesmoke;
+font-size: 1em;
+  padding : 1em;
+  width: 100%;
+  position: absolute;
+  clear: both;
+  background-color: #242124;
+}
+footer a{
+color:white;
+text-decoration: none;
+}
+.footergrid {
+  display: flex;
+  margin-left: 60px;
+  margin-right: 60px;    
+}
+
+.footergrid > div {
+  margin: 30px;
+  padding: 10px;
+}
+.footerrow li{
+    list-style: none;
+    line-height: 1.5;
+    color: whitesmoke;
+}
+.footerrow ol{
+  display: inline-block;
+  color: whitesmoke;
+}
+.icon-xs {
+  width: 32px;
+  height: 32px;
+  line-height: 32px !important;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+}
+
+.white {
+  color: #fff;
+}
+
+.icontext .text {
+  width: 100%;
+  line-height: 1.2;
+}
+
+.icontext p {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+.dropdown-menu .show {
+  display: block;
+}
+.icon-sm {
+  width: 36px;
+  height: 36px;
+  line-height: 36px !important;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.profileText {
+  display: inline-block;
+  width: 74px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: brown;
+}
+
+.cards{
+  display: flex;
+  margin-left: 500px;
+  margin-right: 500px;
+  height: 60px;
+  width: auto;
+  padding-top: 10px;
+}
+.cards > img{
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 38px;
+}
+#cardtxt{
+  padding-right:40px;
+}
+.copyright{
+  text-align: center;
+  text-decoration: none;
+}
+.cright{
+  padding-top: 15px;
+}
+.bannerimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+.lead{
+  text-align: center;
+}
+.btn{
+  color: darkgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green; 
+}
+/* .container-fluid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
