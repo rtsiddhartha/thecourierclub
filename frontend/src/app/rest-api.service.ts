@@ -13,7 +13,7 @@ import { Claim } from "./models/claim";
 
 export class RestApiService {
 
-  private URL = 'http://thecourierclub.herokuapp.com';
+//   private URL = 'http://thecourierclub.herokuapp.com';
   private URL = 'http://localhost:3000';
     
   constructor(private http: HttpClient) {}
