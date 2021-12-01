@@ -56,8 +56,8 @@ claimRoute(app)
 
 
 // listen for requests
-app.listen(3553, () => {
-    console.log("Server is listening on port " + 3553);
+app.listen(3000, () => {
+    console.log("Server is listening on port " + 3000);
 });
 
 module.exports = app;
