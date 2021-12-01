@@ -9,7 +9,7 @@
     "server": "nodemon backend/server.js",
     "build": "cd frontend && npm run build",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start:prod": "cd frontend/src/app ng serve && node cd ../../../backend/server.js",
+    "start:prod": "cd frontend/src/app ng serve && cd ../../../backend node server.js",
     "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "name": "thecourierclub",
