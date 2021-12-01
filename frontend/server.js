@@ -24,7 +24,7 @@ app.listen(process.env.PORT || 3000);
 //PATH LOCATION STARTEGY
 
 app.get('/*', function(req,res){
-  const fullPath = path.join(__dirname + '/dist/angular-app-heroku/index.html');
+  var fullPath = path.join(__dirname + '/dist/angular-app-heroku/index.html');
   console.log(" Fetching from.." + fullPath);
     res.sendFile(fullPath);
 });
